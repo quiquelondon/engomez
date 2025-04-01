@@ -141,7 +141,7 @@
 
         /* Main Content Wrapper */
         .main-content {
-  /*          margin-left: 225px; */
+            margin-left: 225px; 
             padding: 0;
             box-sizing: border-box;
             flex: 1;
@@ -149,7 +149,6 @@
 
         /* Banner Section */
         .banner {
-            position:relative;
             height: 100vh; /* Set height to 430px */
             width:100%;
 /*            background-image: url('video/city lights video 2xspeed.mp4');  */
