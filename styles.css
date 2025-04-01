@@ -150,7 +150,7 @@
         /* Banner Section */
         .banner {
             height: 430px; /* Set height to 430px */
-            background-image: url('https://drive.google.com/thumbnail?id=1-qqwaMTEHnHaEEQ4lNw3FmWkb3Jh9ecp&sz=w2000'); /* Replace with your banner image URL */
+            background-video: url('video/city lights video 2xspeed.mp4'); /* Replace with your banner image URL */
             background-size: cover;
             background-position: center;
             display: flex;
