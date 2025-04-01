@@ -149,7 +149,7 @@
 
         /* Banner Section */
         .banner {
-            height: 100vh; /* Set height to 430px */
+            height: 430px; /* Set height to 430px */
 /*            background-image: url('video/city lights video 2xspeed.mp4');  */
             background-size: cover;
             background-position: center;
