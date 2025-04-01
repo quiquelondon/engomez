@@ -159,12 +159,12 @@
             text-align: center;
         }
 
-        .banner h1, .banner h2 {
+        .banner-content h1, .banner-content h2 {
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
-        .banner h1 span {
+        .banner-content h1 span {
             color: #00aaff;
         }
 
