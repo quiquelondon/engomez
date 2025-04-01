@@ -149,8 +149,10 @@
 
         /* Banner Section */
         .banner {
-            height: 430px; /* Set height to 430px */
-            background-video: url('video/city lights video 2xspeed.mp4'); /* Replace with your banner image URL */
+            position:relative;
+            height: 100vh; /* Set height to 430px */
+            width:100%;
+/*            background-image: url('video/city lights video 2xspeed.mp4');  */
             background-size: cover;
             background-position: center;
             display: flex;
