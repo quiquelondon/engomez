@@ -267,7 +267,7 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .downward-symbol {
-        bottom: 50px;
+        bottom: 100px;
     }
 }
 
