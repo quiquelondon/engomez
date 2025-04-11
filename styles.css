@@ -156,6 +156,7 @@
             text-align:center;
             color: #fff;
             background-color: rgba(95, 101, 104, 0.6);
+            z-index: 100;    
         }
         .header-mobile h2 {
              margin: 15px 0;
