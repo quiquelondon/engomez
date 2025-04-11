@@ -1,8 +1,7 @@
-    <style>
         /* General Styles */
             * {      
             margin: 0;
-}
+          }
             body {
             margin: 0;
             font-family: "Roboto", Arial, sans-serif;
@@ -11,7 +10,7 @@
             color: #00aaff;
             display: flex;
             flex-direction: column;
-        }
+          }
 
         /* Sidebar Styles */
         .sidebar {
@@ -107,7 +106,7 @@
         .sidebar .lnr{
         font-size: 20px;
         padding-right: 10px;    
-}
+        }
 
         /* Hide sidebar on mobile */
         @media (max-width: 768px) {
@@ -128,22 +127,47 @@
             top: 0px;
             left: 0px;
             z-index: 1000;
-            width: 100%;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            padding-left: 10px;
-            background-color: rgba(128, 128, 128, 0.6);
-        }
+           /* width: 100%; */
+            padding: 5px 10px;
+            color: #fff;
+            /*background-color: rgba(0, 170, 255, 0.4);*/
+          }
 
         @media (max-width: 768px) {
             .hamburger {
                 display: block;
             }
             .sidebar .social-icons span{
-            padding-bottom: 100px;
+            padding-bottom: 50px;
             }
         }
+ 
+       /* Menu bold when active*/
+            .bold-menu, .bold-menu span {
+                 font-weight: bold;
+          }
 
+        /* Mobile Header*/
+        .header-mobile {
+            display: none;
+            top: 0;
+            position: fixed;
+            width: 100%;
+            text-align:center;
+            color: #fff;
+            background-color: rgba(95, 101, 104, 0.6);
+        }
+        .header-mobile h2 {
+             margin: 15px 0;
+        }
+        @media (max-width: 768px) {
+            .header-mobile {
+                display: block;
+            }
+            .sidebar-name {
+                display: none;
+            }
+        }
         /* Main Content Wrapper */
         .main-content {
             margin-left: 225px;
@@ -200,17 +224,26 @@
         }
 
         .banner-content p {
-            font-size: 1.5em;
+            font-size: 1em;
         }
 
 
         .banner h1, .banner h2 {
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            display: block;
+            font-family: Roboto;
+            margin-block-end: 0.83em;
         }
 
         .banner h1 span {
-            color: #00aaff;
+            color: lightpink;
+            font-family: Roboto;
+        }
+        .banner h2 span{
+            color: lightpink;
+            display: block;
+            font-family:Roboto;
         }
         /* Symbol styling */
         .downward-symbol {
@@ -230,6 +263,15 @@
             50% { opacity: 0; }
         }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .downward-symbol {
+        bottom: 50px;
+    }
+}
+
+
+
 
         /* Profile Section */
         .profile {
@@ -244,6 +286,7 @@
             color: #00aaff;
             margin-bottom: 15px;
             font-weight: 400;
+            margin-top: 50px;
         }
 
         .profile h2 span{
@@ -326,14 +369,14 @@
   width: 1em;
   height: 1em;
   vertical-align: -0.05em;
-horizontal-align: center;
+
 }
 
 .skill-column span {
   color: #00aaff;
 font-size:60px;
 width: 100%;
-text-align center;
+text-align: center;
 }
 
 
@@ -405,6 +448,7 @@ text-align center;
     color: #00aaff;
     margin-bottom: 20px;
     font-weight: 400;
+    margin-top: 50px; 
 }
 .experience h2 span{
     float:right;
@@ -462,14 +506,14 @@ text-align center;
   width: 1em;
   height: 1em;
   vertical-align: -0.05em;
-horizontal-align: center;
+
 }
 
 .experience-column span {
   color: #00aaff;
 font-size:60px;
 width: 100%;
-text-align center;
+text-align: center;
 }
         .clients {
     padding: 20px;
@@ -527,6 +571,7 @@ text-align center;
     color: #00aaff;
     margin-bottom: 20px;
     font-weight: 400;
+    margin-top: 50px; 
 }
 .projects h2 span{
     float: right;
@@ -606,7 +651,7 @@ text-align center;
 .box i , .box img, .year {
   position: absolute;
   background: #ffffff;
-  top: 10px;
+  /*top: 10px;*/
   width: 60px;
   height: 60px;
   display: flex;
@@ -661,7 +706,7 @@ text-align center;
 }
 
 .info {
-  borser-bottom: 2px;
+  
   position: relative;
   padding: 1rem 1.5rem;
   border-radius: 10px;
@@ -757,7 +802,7 @@ text-align center;
 
   .box i, .box p {
     left: 25px;
-    top: 0;
+    /*top: 0;*/
   }
 
   .info::after {
@@ -912,4 +957,3 @@ text-align:center;
     color: #005577; /* Darker shade on hover */
 }
 
-    </style>
