@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <!-- External scripts -->
+    <script src="scripts.js"></script>
 </head>
 <body>
     
@@ -63,24 +65,6 @@
        </div>
     </div>
 
-    <script>
-        function toggleSidebar() {
-    const sidebar = document.querySelector('.sidebar');
-    sidebar.classList.toggle('active');
-}
-
-document.addEventListener("click", (event) => {
-    const sidebar = document.querySelector('.sidebar');
-    const hamburger = document.querySelector('.hamburger');
-    
-    if (sidebar.classList.contains('active') && 
-        !sidebar.contains(event.target) && 
-        !hamburger.contains(event.target)) {
-        sidebar.classList.remove('active');
-    }
-});
-
-    </script>
 </body>
 </html>
 
