@@ -18,35 +18,47 @@ fetch('button-section.html')
     })
     .catch(error => console.error('Error loading footer:', error));
 
+
+
+
     function switchPage(targetId) {
         const activePage = document.querySelector('.page.active');  // Get the current active page
-        const targetPage = document.getElementById(targetId);  // Get the target page
+        const targetPage = document.getElementById(targetId);       // Get the target page
+        const parentContainer = document.querySelector('.pages-container'); // The parent container of all pages
     
         if (activePage === targetPage) return; // Prevent redundant transitions
     
         // Start transition for the currently active page (exit animation)
         activePage.classList.add('exit');  // Begin the push-out animation
         activePage.classList.remove('active');  // Remove its "active" state
-    
+
+
+        // Scroll the parent container to the target page
+        // if (parentContainer) {
+        //     const targetOffset = targetPage.offsetTop; // Get the vertical position of the target page
+        //     parentContainer.scrollTo({ top: targetOffset, behavior: 'instant' }); // Scroll the parent container to the target page
+        // }
+
         // Activate the target page with the entry animation
         targetPage.classList.remove('hidden');  // Ensure it's visible
-        targetPage.classList.add('active'); // Mark it as the active page
-        // Scroll to the top of the active page after switching pages
-        window.scrollTo(0, 0); // Scroll to the top of the hidden page
-     
+        // targetPage.scrollTo(0, 0); // Reset scroll position to the top
+        targetPage.classList.add('active');     // Mark it as the active page
+        targetPage.classList.add('entering');
         // Wait for the exit animation to complete before hiding all non-active pages
-  
         setTimeout(() => {
             activePage.classList.remove('exit');  // Reset the exit animation state
-            
+    
             // Hide any page that is not marked as active
             document.querySelectorAll('.page').forEach(page => {
                 if (!page.classList.contains('active')) {
                     page.classList.add('hidden');
                 }
+                
+                page.classList.remove('entering');  // Reset the entering animation state
+                window.scrollTo(0, 0); // Reset scroll position to the top
             });
         }, 1000);  // Match the CSS transition duration
-    
+        
 
     
         // Handle the sidebar for smaller screens

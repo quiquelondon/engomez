@@ -6,11 +6,13 @@
     <title>Enrique Gomez - Portfolio</title>
     <!-- External Stylesheets -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <!-- External scripts -->
     <script src="scripts.js"></script>
+    <script src="page-transitions.js"></script>
 </head>
 <body>
     <div class="header-mobile">
@@ -22,7 +24,7 @@
             <h2 class="sidebar-name">Enrique Gomez</h2>
             <img src="assets\profile 2 cropped.png" alt="Enrique Gomez"> <!-- Replace with your profile image -->
         </div>
-        <ul>
+        <ul class="menu" id="mainMenu">
             <li><button data-target="home" onclick="switchPage('home')"><span class="lnr lnr-home"></span> Home</button></li>
             <li><button data-target="profile" onclick="switchPage('profile')"><span class="lnr lnr-user"></span> Profile</button></li>
             <li><button data-target="experience" onclick="switchPage('experience')"><span class="lnr lnr-license"></span> Experience</button></li>
@@ -45,8 +47,7 @@
 
         </div>
     </div>
- 
-        
+  <div class="pages-container" id="pagesContainer">     
     <div class="page active" id="home">
 
 
@@ -498,7 +499,7 @@
 
     </div>   
     </div> 
-
+</div>
 </body>
 </html>
 
