@@ -2,6 +2,9 @@
         * {      
           margin: 0;
         }
+        .smooth-scroll{
+          scroll-behavior: smooth;
+        }
           body {
           margin: 0;
           font-family: "Roboto", Arial, sans-serif;
@@ -200,6 +203,7 @@
           box-sizing: border-box;
           flex: 1;
           font-family: Roboto;
+
       }
 
       /* Banner Section */
@@ -895,6 +899,31 @@ animation: animateLine 3s linear forwards;
   align-items: center;
   height: 100px; /* Set the desired height for the section */
   background-color: #ffffff; /* Optional: section background color */
+  width: 100%;
+}
+.button-section span{
+  color: #00aaff;
+  font-size: 40px;
+}
+#prevButton{
+border: none;
+background-color: transparent;
+left:275px;
+position: absolute;
+cursor: pointer; 
+}
+@media screen and (max-width: 775px) {
+#prevButton {
+  left: 50px;
+}
+}
+
+#nextButton{
+border: none;
+background-color: transparent;
+right: 50px;
+position: absolute;
+cursor: pointer;
 }
 
 /* Centered Button */
