@@ -597,6 +597,10 @@ padding-bottom: 20px;
   color: #333;
 }
 
+.projects-video {
+  object-position: 50% 80%;
+}
+
 .desktop {
   display: block;
 }
