@@ -597,8 +597,20 @@ padding-bottom: 20px;
   color: #333;
 }
 
-.projects-video {
-  object-position: 50% 80%;
+.desktop {
+  display: block;
+}
+.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop{
+    display: none ;
+  }
+  .mobile {
+    display: block;
+  }
 }
 
 .projects h2 {
