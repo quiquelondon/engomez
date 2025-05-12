@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrique Gomez - Portfolio</title>
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <!-- External scripts -->
+    <script src="scripts.js"></script>
+    <script src="page-transitions.js"></script>
+</head>
+<body>
+    <div class="header-mobile">
+        <h2>Enrique Gomez</h2>
+    </div>
+    <div class="hamburger" onclick="toggleSidebar()">☰</div>
+    <div class="sidebar">
+        <div class="image-container">
+            <h2 class="sidebar-name">Enrique Gomez</h2>
+            <img src="assets\hacker-profile.jpg" alt="Enrique Gomez"> <!-- Replace with your profile image -->
+        </div>
+        <ul class="menu" id="mainMenu">
+            <li><button data-target="home" onclick="switchPage('home')"><span class="lnr lnr-home"></span> Home</button></li>
+            <li><button data-target="profile" onclick="switchPage('profile')"><span class="lnr lnr-user"></span> Profile</button></li>
+            <li><button data-target="experience" onclick="switchPage('experience')"><span class="lnr lnr-license"></span> Experience</button></li>
+            <li><button data-target="projects" onclick="switchPage('projects')"><span class="lnr lnr-briefcase"></span> Projects</button></li>
+            <li><button data-target="contact" onclick="switchPage('contact')"><span class="lnr lnr-envelope"></span> Contact</button></li>
+        </ul>
+        <div class="social-icons">
+            <a href="mailto:enrique@engomez.com" title="Email"><span class="fa-stack fa-lg">
+  <i class="fa fa-circle-thin fa-stack-2x"></i>
+  <i class="fa fa-envelope fa-stack-1x"></i>
+</span></a>
+            <a href="tel:+447786057009" title="Phone"><span class="fa-stack fa-lg">
+  <i class="fa fa-circle-thin fa-stack-2x"></i>
+  <i class="fa fa-phone fa-stack-1x"></i>
+</span></a>
+            <a href="https://www.linkedin.com/in/enrique-gomez-mba-pmp" title="LinkedIn" target="_blank"><span class="fa-stack fa-lg">
+  <i class="fa fa-circle-thin fa-stack-2x"></i>
+  <i class="fa fa-linkedin fa-stack-1x"></i>
+</span></a>
+
+        </div>
+    </div>
+  <div class="pages-container" id="pagesContainer">     
+    <div class="page active" id="home">
+
+
+
+    <div class="main-content">
+ 
+    <div class="banner">
+        <!-- Video as the background -->
+        <video autoplay muted loop>
+            <source src="assets\hacker-intro-loop.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Content overlay -->
+        <div class="banner-content">
+            <h1>Enrique <span>Gomez</span></h1>
+            <h2>Organizational Change Management Lead</h2>
+            <h2><span>MBA, PMP, CCMP</span></h2>
+            <div class="button-container">
+                <a data-target="profile" onclick="switchPage('profile')" class="centered-button">Go to Profile</a>
+                <a href="https://drive.google.com/file/d/1BolAdzybVjgY7hJhmrUWuo5mI8WXMyJN/view?usp=sharing" class="centered-button" target="_blank">Download Resume</a>
+            </div>
+       </div>
+    </div>
+
+    </div>
+
+    </div>
+    
+    
+    <div class="page hidden" id="profile">
+
+        <div class="main-content">
+        <div class="banner">
+            <!-- Video as the background -->
+            <video autoplay muted loop>
+                <source src="assets\laptop-fire-loop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+    
+            <!-- Content overlay -->
+            <div class="banner-content">
+                <h2><span>ch-ch-ch-ch-Changes</span></h2>
+                <h1>Turn and face the strange</h1>
+                <h2><span>Ch-ch-Changes</span></h2>
+            </div>
+            <a href="#profile-anchor" class="downward-symbol">></a>
+        </div>
+    
+            <div class="profile" id="profile-anchor">
+                <h2 class="animation">Profile<span class="lnr lnr-user"></span></h2>
+                <hr>
+                <p class="reverse-animation">
+                    Results-driven Change Management Leader with 15+years of experience organizing transformational initiatives across global organizations in industries such as pharmaceuticals, energy, and consumer goods. 
+                </p>
+                <p class="reverse-animation">
+                    Proven track record in managing large-scale implementations, including SAP, MDG, myBuy, Reltio, and Coupa, while driving organizational change, process standardization, and data quality improvement. Skilled at aligning stakeholders, managing cross-functional teams, and fostering a culture of adaptability in complex, high-impact projects. 
+                </p>
+                <p class="reverse-animation">
+                    Certified in Change Management (CCMP) and Project Management (PMP), complemented by an International MBA and a strong foundation in business administration. Known for delivering strategic solutions to streamline processes, enhance system adoption, and ensure seamless transitions for teams across geographies. 
+                </p>
+            </div>
+            <hr>
+    
+    <div class="skills">
+        <h2 class="animation">Skills<span class="lnr lnr-cog"></span></h2>
+        <hr>    
+    
+        <div class="skill-columns reverse-animation">
+            <!-- Skill 1 -->
+            <div class="skill-column">
+                <span class="lnr lnr-apartment"></span>
+                <h3>Industry</h3>
+                <p>Pharma</p>
+                <p>Oil and Gas</p>
+                <p>Food & Beberages</p>
+                <p>FMCG</p>
+            </div>
+            <!-- Skill 2 -->
+            <div class="skill-column">
+                <span class="lnr lnr-rocket"></span>
+                <h3>Change Areas</h3>
+                <p>ERP's</p>
+                <p>Data</p>
+                <p>Org & Culture</p>
+                <p>Procurement...</p>
+            </div>
+            <!-- Skill 3 -->
+            <div class="skill-column">
+                <span class="lnr lnr-earth"></span>
+                <h3>Languages</h3>
+                <p>English</p>
+                <p>Spanish</p>
+                <p>Italian</p>
+                <p>Portuguese</p>
+            </div>
+            <!-- Skill 4 -->
+            <div class="skill-column">
+                <span class="lnr lnr-star"></span>
+                <h3>Awards</h3>
+                <p>CEO Award</p>
+                <p>Finance Excellence</p>
+                <p>Project Prodigy</p>
+                <p>(AstraZeneca)</p>
+            </div>
+        </div>
+    </div>
+    
+    <hr>
+    
+    <div class="education">
+        <h2 class="reverse-animation">Education<span class="lnr lnr-book"></span></h2>
+        <hr>
+        <div class="education-columns flash-animation">
+            <!-- Column 1 -->
+            <div class="education-column">
+                <img src="assets/IE-Bus-School-_rectangle.png" alt="Instituto de Empresa" />
+                <p><strong>IE</strong><br>Master's in Business Administration</p>
+            </div>
+            <!-- Column 2 -->
+            <div class="education-column">
+                <img src="assets\PMP badge small.png" alt="PMI" />
+                <p><strong>PMI</strong><br>PMP-Project Management Professional</p>
+            </div>
+            <!-- Column 3 -->
+            <div class="education-column">
+                <img src="assets\CCMP badge small.png" alt="ACMP" />
+                <p><strong>ACMP</strong><br>CCMP-Certified Change Management Professional</p>
+            </div>
+            <!-- Column 4 -->
+            <div class="education-column">
+                <img src="assets\logo ule final small.png" alt="Universidad de Leon" />
+                <p><strong>ULE</strong><br>BA Business Studies</p>
+            </div>
+        </div>
+    </div>
+    
+    <hr>
+    <div class="button-section" id="button-section"></div>
+    <hr>
+    
+    <div class="footer" id="footer"></div>
+    
+    
+    
+        </div>
+    </div>
+    
+    
+    <div class="page hidden" id="experience">
+
+
+        <div class="main-content">
+        <div class="banner">
+            <!-- Video as the background -->
+            <video autoplay muted loop>
+                <source src="assets\laptop-ola-long-loop-compressed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+    
+            <!-- Content overlay -->
+            <div class="banner-content">
+                <h2>if you can't change the world</h2>
+                <h1><span>Change Yourself</span></h1>
+                <h2>and if you can't change yourself then</h2>
+                <h1><span>Change the World</span></h1>
+            </div>
+            <a href="#experience-anchor" class="downward-symbol">></a>
+        </div>
+    
+    <div class="experience" id="experience-anchor">
+        <h2 class="animation">Areas of expertise<span class="lnr lnr-briefcase"></span></h2>
+        <hr>    
+    
+        <div class="experience-columns reverse-animation">
+            <!-- Experience 1 -->
+            <div class="experience-column">
+                <span class="lnr lnr-database"></span>
+                <p>Enterprise Data Transformation & Governance</p>
+            </div>
+            <!-- Experience 2 -->
+            <div class="experience-column">
+                <span class="lnr lnr-laptop-phone"></span>
+                <p>Large-Scale ERP and System Implementations</p>
+            </div>
+            <!-- Experience 3 -->
+            <div class="experience-column">
+                <span class="lnr lnr-bullhorn"></span>
+                <p>Organizational Change & Communications</p>
+            </div>
+            <!-- Experience 4 -->
+            <div class="experience-column">
+                <span class="lnr lnr-pie-chart"></span>
+                <p>Business Readiness & Change Impact Analysis</p>
+            </div>
+            <!-- Experience 5 -->
+            <div class="experience-column">
+                <span class="lnr lnr-move"></span>
+                <p>Global Business Process Optimization</p>
+            </div>
+            <!-- Experience 6 -->
+            <div class="experience-column">
+                <span class="lnr lnr-thumbs-up"></span>
+                <p>Compliance & Regulatory Data Alignment</p>
+            </div>
+            <!-- Experience 7 -->
+            <div class="experience-column">
+                <span class="lnr lnr-graduation-hat"></span>
+                <p>Training & Capability Building</p>
+            </div>
+            <!-- Experience 8 -->
+            <div class="experience-column">
+                <span class="lnr lnr-construction"></span>
+                <p>Resistance Management & Culture Shift</p>
+            </div>
+    
+        </div>
+    </div>
+    
+    <hr>
+    
+    <div class="clients">
+        <h2 class="animation">Clients<span class="lnr lnr-cart"></span></h2>
+        <hr>
+            <div class="clients-grid flash-animation">
+                <img src="assets\GSK logo.png" alt="GSK">
+                <img src="assets\astrazeneca-logo-colour.png" alt="AstraZeneca">
+                <img src="assets\Roche.png" alt="Roche">
+                <img src="assets\diageo-logo-black-and-white.png" alt="Diageo">
+                <img src="assets\RB logo.png" alt="Reckitt">
+                <img src="assets\Royal_Dutch_Shell-Logo.wine.png" alt="Shell">
+                <img src="assets\Tate_&_Lyle_new_logo_2023.png" alt="Tate & Lyle">
+                <img src="assets\Sysdoc logo.png" alt="Sysdoc">
+                <img src="assets\fresh gravity logo.png" alt="Fresh Gravity">
+                <img src="assets\bp logo.png" alt="BP">
+                <img src="assets\Tech Mahindra Logo.png" alt="Tech Mahindra">
+                <img src="assets\informa logo.png" alt="Informa"> 
+            </div>
+    </div>
+    
+    <hr>
+    <div class="button-section" id="button-section"></div>
+    <hr>
+    
+    <div class="footer" id="footer"></div>
+    
+    
+    
+        </div>
+    
+        </div>
+    
+
+        <div class="page hidden" id="projects">
+
+
+            <div class="main-content">
+            <div class="banner">
+                <!-- Video as the background -->
+                <video class="projects-video" autoplay muted loop>
+                    <source src="assets/laptop-office-lego-1-1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+        
+                <!-- Content overlay -->
+                <div class="banner-content">
+                    <h2>Change is coming just like the sun</h2>
+                    <h1><span>Change is coming you better run</span></h1>
+                </div>
+                <a href="#projects-anchor" class="downward-symbol">></a>
+            </div>
+                <div class="projects" id="projects-anchor">
+                  <h2 class="animation">Projects<span class="lnr lnr-calendar-full"></span></h2>
+                  <hr>
+        <!-- timeline Container -->
+            <div class="timeline-container">
+              <!-- Vertical line -->
+              <div class="vertical-line"></div>
+              <!-- Box -->
+              <div class="box box-lef reverse-animation">
+                <p class="year">2025</p>
+                <div class="info">
+                  <h2>Onyx/GCP Migration</h2>
+                  <hr>
+                  <p>
+                    Migration of Scientific data from 24 on-prem systems to ONYX/Google Cloud Platform in GSK.
+                  </p>
+                  <a href="#">Learn more...</a>
+                </div>
+              </div>
+              <div class="box box-right animation">
+                <p class="year">2024</p>
+                <div class="info">
+                  <h2>SAP MDG Implementation</h2>
+                  <hr>
+                  <p>
+                    Implementation of SAP MDG for NAM and LATAM in AstraZeneca as part of the standardisation of Master Data systems and processes for
+        Customers and Vendors.
+                  </p>
+                  <a href="#">Learn more...</a>
+                </div>
+              </div>
+              <div class="box box-left reverse-animation">
+                <p class="year">2023</p>
+                <div class="info">
+                  <h2>MyBuy Procurement Implementation</h2>
+                  <hr>
+                  <p>
+                    Led the implementation of the myBuy procurement system in EMEA to support the rollout of new global procurement processes in Roche.
+                  </p>
+                  <a href="#">Learn more...</a>
+                </div>
+              </div>
+              <div class="box box-right animation">
+                <p class="year">2022</p>
+                <div class="info">
+                  <h2>Data Normalisation</h2>
+                  <hr>
+                  <p>
+                    Normalisation and improvement of the quality of the Data during it’s life cycle for AstraZeneca. Change manager for the implementation of a DataMinded culture throughout the whole Digital Health function. 
+                  </p>
+                  <a href="#">Learn more...</a>
+                </div>
+              </div>
+              <div class="box box-left reverse-animation">
+                <p class="year">2021</p>
+                <div class="info">
+                  <h2>Legal Separation</h2>
+                  <hr>
+                  <p>
+                    OCM Lead for Tate & Lyle Legal Restructure through the separation of the Food and Beverage Solutions division from the Primary
+        Products Business Unit impacting all the geographies and workstreams.
+                  </p>
+                  <a href="#">Learn more...</a>
+                </div>
+              </div>
+              <div class="box box-right animation">
+                <p class="year">2020</p>
+                <div class="info">
+                  <h2>Reltio Implementation</h2>
+                  <hr>
+                  <p>
+                    Change Manager Lead for the implementation of Reltio to normalize Master Data records for Investigators and Institutions impacting
+        over 5,000 employees.
+                  </p>
+                  <a href="#">Learn more...</a>
+                </div>
+              </div>
+              <div class="box box-left reverse-animation">
+                <p class="year">2019</p>
+                <div class="info">
+                  <h2>GDPR implementation and SharePoint upgrade</h2>
+                  <hr>
+                  <p>
+                    Interlock between the Central Project Team and the “Projects and Technology” function for the SharePoint update and implementation
+        of “Teams” and GDPR policies impacting over 20,000 users.
+                  </p>
+                  <a href="#">Learn more...</a>
+                </div>
+              </div>
+              <div class="box box-right animation">
+                <p class="year">2018</p>
+                <div class="info">
+                  <h2>Legal Restructure and Migrations</h2>
+                  <hr>
+                  <p>
+                    Change Manager for the migration of PTP, RTR and MDM processes from Shared Service Centres to GENPACT in Bangalore and
+        the Legal Entity restructure of the Shared Service Centre into Health and Household Business Units impacting 52 countries.
+                  </p>
+                  <a href="#">Learn more...</a>
+                </div>
+              </div>
+              <div class="box box-left reverse-animation">
+                <p class="year">2017</p>
+                <div class="info">
+                  <h2>Coupa implementation</h2>
+                  <hr>
+                  <p>
+                    Application of new Global procurement processes together with the implementation of Coupa system impacting more than 6000 users.
+                  </p>
+                  <a href="#">Learn more...</a>
+                </div>
+              </div>
+              <div class="box box-right animation">
+                <p class="year">06-<br>14</p>
+                <div class="info">
+                  <h2>SAP Implementation</h2>
+                  <hr>
+                  <p>
+                    End to end Organisational Change Management activities for Global SAP implementation working with Europe, South East Asia and
+        the US including retrofit countries and Shared Service Services
+                  </p>
+                  <a href="#">Learn more...</a>
+                </div>
+              </div>
+        
+            </div>
+        
+        
+        </div>
+        <hr>
+        <div class="button-section" id="button-section"></div>
+        <hr>
+        
+        <div class="footer" id="footer"></div>
+        
+        
+        
+            </div>
+        
+            </div>
+        
+
+            <div class="page hidden" id="contact">
+
+    <div class="main-content">
+ 
+    <div class="banner">
+        <!-- Video as the background -->
+        <video class="desktop" autoplay muted>
+            <source src="assets\hacker-manga-cropped.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video class="mobile" autoplay muted>
+            <source src="assets\hacker-revealed-mobile.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Content overlay -->
+        <div class="banner-content">
+            <h2 class="flash-animation">There's definitely, definitely, definitely no logic</h2>
+            <h1 class="flash-animation"><span>To Human Behaviour</span></h1>
+        <div class="social-icons reverse-animation">
+            <a href="mailto:enrique@engomez.com" title="Email"><span class="fa-stack fa-lg">
+  <i class="fa fa-circle-thin fa-stack-2x"></i>
+  <i class="fa fa-envelope fa-stack-1x"></i>
+</span>  enrique@engomez.com</a>
+<br>
+<br>
+            <a href="tel:+447786057009" title="Phone"><span class="fa-stack fa-lg">
+  <i class="fa fa-circle-thin fa-stack-2x"></i>
+  <i class="fa fa-phone fa-stack-1x"></i>
+</span>  +44 77 8605 7009</a> / <a href="tel:+34628513451" title="Phone">+34 628 513 451</a>
+<br>
+<br>
+            <a href="https://www.linkedin.com/in/enrique-gomez-mba-pmp" title="LinkedIn" target="_blank"><span class="fa-stack fa-lg">
+  <i class="fa fa-circle-thin fa-stack-2x"></i>
+  <i class="fa fa-linkedin fa-stack-1x"></i>
+</span>  https://www.linkedin.com/in/enrique-gomez-mba-pmp</a>
+
+        </div>       </div>
+    </div>
+
+    </div>   
+    </div> 
+</div>
+</body>
+</html>
+
+

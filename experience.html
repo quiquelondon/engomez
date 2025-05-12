@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrique Gomez - Portfolio</title>
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <!-- External scripts -->
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="header-mobile">
+        <h2>Enrique Gomez</h2>
+    </div>
+    <div class="hamburger" onclick="toggleSidebar()">☰</div>
+    <div class="sidebar">
+        <div class="image-container">
+            <h2 class="sidebar-name">Enrique Gomez</h2>
+            <img src="assets\profile 2 cropped.png" alt="Enrique Gomez"> <!-- Replace with your profile image -->
+        </div>
+        <ul>
+            <li><a href="index.html" onclick="switchPage('home')"><span class="lnr lnr-home"></span> Home</a></li>
+            <li><a href="profile.html" onclick="switchPage('profile')"><span class="lnr lnr-user"></span> Profile</a></li>
+            <li><a href="experience.html" onclick="switchPage('experience')"><span class="lnr lnr-license"></span> Experience</a></li>
+            <li><a href="projects.html" onclick="switchPage('projects')"><span class="lnr lnr-briefcase"></span> Projects</a></li>
+            <li><a href="contact.html" onclick="switchPage('contact')"><span class="lnr lnr-envelope"></span> Contact</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="mailto:enrique@engomez.com" title="Email"><span class="fa-stack fa-lg">
+  <i class="fa fa-circle-thin fa-stack-2x"></i>
+  <i class="fa fa-envelope fa-stack-1x"></i>
+</span></a>
+            <a href="tel:+447786057009" title="Phone"><span class="fa-stack fa-lg">
+  <i class="fa fa-circle-thin fa-stack-2x"></i>
+  <i class="fa fa-phone fa-stack-1x"></i>
+</span></a>
+            <a href="https://www.linkedin.com/in/enrique-gomez-mba-pmp" title="LinkedIn" target="_blank"><span class="fa-stack fa-lg">
+  <i class="fa fa-circle-thin fa-stack-2x"></i>
+  <i class="fa fa-linkedin fa-stack-1x"></i>
+</span></a>
+
+        </div>
+    </div>
+
+    <div class="page" id="experience">
+
+
+    <div class="main-content">
+    <div class="banner">
+        <!-- Video as the background -->
+        <video autoplay muted loop>
+            <source src="assets\fiber optics compressed.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Content overlay -->
+        <div class="banner-content">
+            <h2>if you can't change the world</h2>
+            <h1><span>Change Yourself</span></h1>
+            <h2>and if you can't change yourself then</h2>
+            <h1><span>Change the World</span></h1>
+        </div>
+        <a href="#experience-anchor" class="downward-symbol">></a>
+    </div>
+
+<div class="experience" id="experience-anchor">
+    <h2>Areas of expertise<span class="lnr lnr-briefcase"></span></h2>
+    <hr>    
+
+    <div class="experience-columns">
+        <!-- Experience 1 -->
+        <div class="experience-column">
+            <span class="lnr lnr-database"></span>
+            <p>Enterprise Data Transformation & Governance</p>
+        </div>
+        <!-- Experience 2 -->
+        <div class="experience-column">
+            <span class="lnr lnr-laptop-phone"></span>
+            <p>Large-Scale ERP and System Implementations</p>
+        </div>
+        <!-- Experience 3 -->
+        <div class="experience-column">
+            <span class="lnr lnr-bullhorn"></span>
+            <p>Organizational Change & Communications</p>
+        </div>
+        <!-- Experience 4 -->
+        <div class="experience-column">
+            <span class="lnr lnr-pie-chart"></span>
+            <p>Business Readiness & Change Impact Analysis</p>
+        </div>
+        <!-- Experience 5 -->
+        <div class="experience-column">
+            <span class="lnr lnr-move"></span>
+            <p>Global Business Process Optimization</p>
+        </div>
+        <!-- Experience 6 -->
+        <div class="experience-column">
+            <span class="lnr lnr-thumbs-up"></span>
+            <p>Compliance & Regulatory Data Alignment</p>
+        </div>
+        <!-- Experience 7 -->
+        <div class="experience-column">
+            <span class="lnr lnr-graduation-hat"></span>
+            <p>Training & Capability Building</p>
+        </div>
+        <!-- Experience 8 -->
+        <div class="experience-column">
+            <span class="lnr lnr-construction"></span>
+            <p>Resistance Management & Culture Shift</p>
+        </div>
+
+    </div>
+</div>
+
+<hr>
+
+<div class="clients">
+    <h2>Clients<span class="lnr lnr-cart"></span></h2>
+    <hr>
+        <div class="clients-grid">
+            <img src="assets\GSK logo.png" alt="GSK">
+            <img src="assets\astrazeneca-logo-colour.png" alt="AstraZeneca">
+            <img src="assets\Roche.png" alt="Roche">
+            <img src="assets\diageo-logo-black-and-white.png" alt="Diageo">
+            <img src="assets\RB logo.png" alt="Reckitt">
+            <img src="assets\Royal_Dutch_Shell-Logo.wine.png" alt="Shell">
+            <img src="assets\Tate_&_Lyle_new_logo_2023.png" alt="Tate & Lyle">
+            <img src="assets\Sysdoc logo.png" alt="Sysdoc">
+            <img src="assets\fresh gravity logo.png" alt="Fresh Gravity">
+            <img src="assets\bp logo.png" alt="BP">
+            <img src="assets\Tech Mahindra Logo.png" alt="Tech Mahindra">
+            <img src="assets\informa logo.png" alt="Informa"> 
+        </div>
+</div>
+
+<hr>
+<div class="button-section">
+    <a href="https://drive.google.com/file/d/1BolAdzybVjgY7hJhmrUWuo5mI8WXMyJN/view?usp=sharing" class="centered-button">Download Resume</a>
+</div>
+<hr>
+
+<div class="footer-section">
+    <h2>Enrique Gomez</h2>
+    <div class="social-icons">
+        <a href="mailto:enrique@engomez.com" title="Email">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle-thin fa-stack-2x"></i>
+                <i class="fa fa-envelope fa-stack-1x"></i>
+            </span>
+        </a>
+        <a href="tel:+447786057009" title="Phone">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle-thin fa-stack-2x"></i>
+                <i class="fa fa-phone fa-stack-1x"></i>
+            </span>
+        </a>
+        <a href="https://www.linkedin.com/in/enrique-gomez-mba-pmp" title="LinkedIn" target="_blank">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle-thin fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x"></i>
+            </span>
+        </a>
+    </div>
+</div>
+
+
+
+    </div>
+
+    </div>  
+
+</body>
+</html>
