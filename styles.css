@@ -1076,7 +1076,7 @@ transition: transform 1s ease, opacity 1s ease; /* Smooth transition */
 z-index: 0;
 opacity: 0;
 overflow-x: hidden; /* Prevent horizontal scroll */
-scroll-behavior: smooth;
+/* scroll-behavior: smooth; */
 }
 
 @media (max-width: 768px) {
