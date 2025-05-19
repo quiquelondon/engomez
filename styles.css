@@ -1014,7 +1014,6 @@ text-align:center;
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
-  flex-shrink: 0;
 }
 
 .footer-section h2 {
@@ -1059,7 +1058,6 @@ text-align:center;
   overflow: hidden;
   background-color: grey;
   padding-bottom: 150px;
-  overflow-y: auto;
 }
 
 @media (max-width: 768px) {
