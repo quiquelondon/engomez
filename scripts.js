@@ -81,9 +81,28 @@ function switchPage(targetId) {
 
     const activeButton = document.querySelector(`[data-target="${targetId}"]`);
     if (activeButton) activeButton.classList.add('active');
+
+// Update URL without reloading
+    history.pushState({ pageId: targetId }, '', `#${targetId}`);
 }
 
+// popstate event listener to handle back/forward navigation
+window.addEventListener('popstate', (event) => {
+    if (event.state && event.state.pageId) {
+        switchPage(event.state.pageId);
+    }
+});
+// Check if there's a hash in the URL on page load 
+document.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+        switchPage(hash);
+    }
+    if (window.location.hash !== `#${targetId}`) {
+    history.pushState({ pageId: targetId }, '', `#${targetId}`);
+}
 
+});
 
 
 function toggleSidebar() {
