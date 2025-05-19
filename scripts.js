@@ -23,58 +23,67 @@ fetch('button-section.html')
 
 
 
-    function switchPage(targetId) {
-        const activePage = document.querySelector('.page.active');  // Get the current active page
-        const targetPage = document.getElementById(targetId);       // Get the target page
-        const parentContainer = document.querySelector('.pages-container'); // The parent container of all pages
-    
-        if (activePage === targetPage) return; // Prevent redundant transitions
-    
-        // Start transition for the currently active page (exit animation)
-        activePage.classList.add('exit');  // Begin the push-out animation
-        activePage.classList.remove('active');  // Remove its "active" state
+function switchPage(targetId) {
+    const activePage = document.querySelector('.page.active');
+    const targetPage = document.getElementById(targetId);
+    const allPages = document.querySelectorAll('.page');
 
-        // Activate the target page with the entry animation
-        targetPage.classList.remove('hidden');  // Ensure it's visible
-        targetPage.scrollTo(0, 0); 
-        targetPage.classList.add('active');     // Mark it as the active page
-        targetPage.classList.add('entering');
+    if (!targetPage || activePage === targetPage) return;
 
-        // Wait for the exit animation to complete before hiding all non-active pages
-        setTimeout(() => {
-            activePage.classList.remove('exit');  // Reset the exit animation state
-    
-            // Hide any page that is not marked as active
-            document.querySelectorAll('.page').forEach(page => {
-                if (!page.classList.contains('active')) {
-                    page.classList.add('hidden');
-                }
-                
-                page.classList.remove('entering');  // Reset the entering animation state
-                window.scrollTo(0, 0); // Reset scroll position to the top
-            });
-        }, 1000);  // Match the CSS transition duration
+    // 🔁 Clean old transition classes
+    // const cleanTransitionClasses = (el) => {
+    //     el.classList.forEach(cls => {
+    //         if (cls.startsWith('enter-') || cls.startsWith('exit-')) {
+    //             el.classList.remove(cls);
+    //         }
+    //     });
+    // };
+    // cleanTransitionClasses(activePage);
+    // cleanTransitionClasses(targetPage);
 
-        // window.location.hash = targetId; // Updates URL hash
-    
-        // Handle the sidebar for smaller screens
-        const sidebar = document.querySelector('.sidebar');
-        if (window.innerWidth < 768) {  // Adjust the breakpoint as needed
-            sidebar.classList.add('hide');  // Apply the hide (ease-out) transition
-    
-            // Remove "active" and reset the hide state once the transition completes
-            setTimeout(() => {
-                sidebar.classList.remove('active');
-                sidebar.classList.remove('hide');
-            }, 300);  // Match the CSS transition duration
-        }
-    
-        // Update the navigation menu to highlight the active page
-        document.querySelectorAll('.sidebar ul li button').forEach(button => {
-            button.classList.remove('active');  // Remove active class from all buttons
+    // 🌀 Get transition type from target page
+    const transitionType = targetPage.dataset.transition || 'slide';
+
+    // 🔁 Begin transition
+    activePage.classList.add(`exit-${transitionType}`);
+    activePage.classList.remove('active');
+
+    targetPage.classList.remove('hidden');
+    targetPage.scrollTo(0, 0);
+    targetPage.classList.add('active', 'entering', `enter-${transitionType}`);
+
+    // 🧹 Clean up after animation
+    setTimeout(() => {
+        activePage.classList.remove(`exit-${transitionType}`);
+        targetPage.classList.remove('entering', `enter-${transitionType}`);
+
+        allPages.forEach(page => {
+            if (!page.classList.contains('active')) {
+                page.classList.add('hidden');
+            }
         });
-        document.querySelector(`[data-target="${targetId}"]`).classList.add('active');  // Highlight the corresponding button
+
+        window.scrollTo(0, 0);
+    }, 1000); // Match animation duration
+
+    // 📱 Hide sidebar on mobile
+    const sidebar = document.querySelector('.sidebar');
+    if (window.innerWidth < 768 && sidebar) {
+        sidebar.classList.add('hide');
+        setTimeout(() => {
+            sidebar.classList.remove('active', 'hide');
+        }, 300);
     }
+
+    // 🧭 Highlight active menu button
+    document.querySelectorAll('.sidebar ul li button')
+        .forEach(btn => btn.classList.remove('active'));
+
+    const activeButton = document.querySelector(`[data-target="${targetId}"]`);
+    if (activeButton) activeButton.classList.add('active');
+}
+
+
 
 
 function toggleSidebar() {
@@ -166,6 +175,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     } else {
                         btn.removeAttribute("onclick");
                     }
+                });
+                    document.querySelectorAll('.prevId').forEach(el => {
+                    el.innerHTML = prevId ? `${prevId}` : '';
+                });
+            
+                document.querySelectorAll('.nextId').forEach(el => {
+                    el.innerHTML = nextId ? `${nextId}` : '';
                 });
             }
         }
