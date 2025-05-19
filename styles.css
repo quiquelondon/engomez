@@ -1006,7 +1006,7 @@ text-align:center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 150px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 300;
   color: #00aaff;
@@ -1030,6 +1030,7 @@ text-align:center;
   align-items: center;
   gap: 15px;
   margin-top: 10px; /* Space between name and icons */
+  margin-bottom: 50px;
 }
 
 .footer-section .social-icons a {
