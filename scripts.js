@@ -50,7 +50,7 @@ function switchPage(targetId) {
 
     targetPage.classList.remove('hidden');
     targetPage.scrollTo(0, 0);
-    targetPage.classList.add('active', 'entering', `enter-${transitionType}`);
+    targetPage.classList.add('active', 'instant-scroll', 'entering', `enter-${transitionType}`);
 
     // 🧹 Clean up after animation
     setTimeout(() => {
@@ -62,7 +62,7 @@ function switchPage(targetId) {
                 page.classList.add('hidden');
             }
         });
-
+   
         window.scrollTo(0, 0);
     }, 1000); // Match animation duration
 
