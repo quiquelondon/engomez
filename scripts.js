@@ -50,7 +50,7 @@ function switchPage(targetId) {
 
     targetPage.classList.remove('hidden');
     targetPage.scrollTo(0, 0);
-    targetPage.classList.add('active', 'instant-scroll', 'entering', `enter-${transitionType}`);
+    targetPage.classList.add('active', 'entering', `enter-${transitionType}`);
 
     // 🧹 Clean up after animation
     setTimeout(() => {
@@ -62,9 +62,10 @@ function switchPage(targetId) {
                 page.classList.add('hidden');
             }
         });
-   
-        window.scrollTo(0, 0);
+        window.scrollTo(0,0);
+
     }, 1000); // Match animation duration
+
 
     // 📱 Hide sidebar on mobile
     const sidebar = document.querySelector('.sidebar');
@@ -83,26 +84,23 @@ function switchPage(targetId) {
     if (activeButton) activeButton.classList.add('active');
 
 // Update URL without reloading
+if (window.location.hash !== `#${targetId}`) {
     history.pushState({ pageId: targetId }, '', `#${targetId}`);
 }
-
-// popstate event listener to handle back/forward navigation
+}
 window.addEventListener('popstate', (event) => {
     if (event.state && event.state.pageId) {
         switchPage(event.state.pageId);
     }
 });
-// Check if there's a hash in the URL on page load 
-document.addEventListener('DOMContentLoaded', () => {
-    const hash = window.location.hash.replace('#', '');
-    if (hash) {
-        switchPage(hash);
-    }
-    if (window.location.hash !== `#${targetId}`) {
-    history.pushState({ pageId: targetId }, '', `#${targetId}`);
-}
+// document.addEventListener('DOMContentLoaded', () => {
+//     const hash = window.location.hash.replace('#', '');
+//     if (hash) {
+//         switchPage(hash);
+//     }
+// });
 
-});
+
 
 
 function toggleSidebar() {

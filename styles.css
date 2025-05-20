@@ -205,7 +205,7 @@
           font-family: Roboto;
           width: 100%; /* Adjust width to account for sidebar */
           position: absolute;
-
+          scroll-behavior: smooth;
       }
 
       /* Banner Section */
@@ -282,7 +282,7 @@
           bottom: 20px; /* Move closer to the bottom */
           left: 50%;
           transform: translateX(-50%); 
-          font-size: 5em;
+          font-size: 4em;
           color: white;
           text-decoration: none;
           animation: blink 1s infinite;
@@ -600,7 +600,7 @@ padding-bottom: 20px;
 }
 
 .projects-video {
-  object-position: 50% 80%;
+  object-position: 50% 15%;
 }
 
 .desktop {
@@ -1076,11 +1076,9 @@ transition: transform 1s ease, opacity 1s ease; /* Smooth transition */
 z-index: 0;
 opacity: 0;
 overflow-x: hidden; /* Prevent horizontal scroll */
-scroll-behavior: smooth;
+scroll-behavior: auto;
 }
-.page.instant-scroll {
-  scroll-behavior: auto;
-}
+
 
 @media (max-width: 768px) {
   .page {
@@ -1093,6 +1091,7 @@ scroll-behavior: smooth;
 transform: translateX(0); /* Centered in view */
 z-index: 0;
 opacity: 1;
+ scroll-behavior: smooth;
 }
 
 /* Exiting page */
