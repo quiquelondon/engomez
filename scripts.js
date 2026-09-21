@@ -123,6 +123,11 @@ document.addEventListener("click", (event) => {
 // Sidebar ease-out on page load with transitions
 document.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", (event) => {
+        // Let links intended for a new tab use the browser's native behavior.
+        if (link.target === "_blank") {
+            return;
+        }
+
         event.preventDefault(); // Prevent default link behavior for smooth transition
         const sidebar = document.querySelector(".sidebar");
 
