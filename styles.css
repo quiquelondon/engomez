@@ -1,5 +1,18 @@
+/* Project card details. */
+.info .project-client {
+  color: #006b8f;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.info .project-dates { color: #555; font-size: 13px; line-height: 1.5; }
+.info .project-role { margin-top: 12px; }
+.info p { line-height: 1.55; }
+.latest-project .info { border-top: 4px solid #006b8f; }
+.latest-project .latest-marker { font-size: 16px; font-weight: 700; }
+
         /* General Styles */
-        * {      
+        * {
           margin: 0;
         }
         .smooth-scroll{
@@ -125,7 +138,7 @@
       }
       .sidebar .lnr{
       font-size: 20px;
-      padding-right: 10px;    
+      padding-right: 10px;
       }
 
       /* Hide sidebar on mobile */
@@ -139,8 +152,8 @@
       }
 
       /* Transition for sidebar easing out */
-      
-      .sidebar.hide { 
+
+      .sidebar.hide {
         transform: translateX(-100%); /* Slides out of view when loading page*/
       }
 
@@ -183,7 +196,7 @@
           text-align:center;
           color: #fff;
           background-color: rgba(95, 101, 104, 0.6);
-          z-index: 1000;    
+          z-index: 1000;
       }
       .header-mobile h2 {
            margin: 15px 0;
@@ -210,7 +223,7 @@
 
       /* Banner Section */
 /*      .banner {*/
-/*       height: 430px;*/ 
+/*       height: 430px;*/
 /*       background-image: url('https://drive.google.com/thumbnail?id=1-qqwaMTEHnHaEEQ4lNw3FmWkb3Jh9ecp&sz=w2000'); */
 /*          background-size: cover; */
 /*          background-position: center; */
@@ -281,7 +294,7 @@
           position: absolute; /* Position it absolutely within the banner */
           bottom: 20px; /* Move closer to the bottom */
           left: 50%;
-          transform: translateX(-50%); 
+          transform: translateX(-50%);
           font-size: 4em;
           color: white;
           text-decoration: none;
@@ -321,7 +334,7 @@
       }
 
       .profile h2 span{
-      float: right;  
+      float: right;
 }
 
       .profile p {
@@ -394,7 +407,7 @@
       max-width: 100%;
   }
 }
-   
+
       .lnr {
 display: inline-block;
 fill: currentColor;
@@ -481,7 +494,7 @@ padding: 20px 0;
   color: #00aaff;
   margin-bottom: 20px;
   font-weight: 400;
-  margin-top: 50px; 
+  margin-top: 50px;
 }
 .experience h2 span{
   float:right;
@@ -532,7 +545,7 @@ padding: 20px 0;
       max-width: 100%;
   }
 }
-   
+
       .lnr {
 display: inline-block;
 fill: currentColor;
@@ -625,7 +638,7 @@ padding-bottom: 20px;
   color: #00aaff;
   margin-bottom: 20px;
   font-weight: 400;
-  margin-top: 50px; 
+  margin-top: 50px;
 }
 .projects h2 span{
   float: right;
@@ -633,7 +646,8 @@ padding-bottom: 20px;
 
 .timeline-container {
 position: relative;
-max-width: 1200px;
+width: min(100%, 1200px);
+margin: 0 auto;
 height: fit-content;
 padding: 80px 0px;
 }
@@ -933,7 +947,7 @@ border: none;
 background-color: transparent;
 left:50px;
 position: fixed;
-cursor: pointer; 
+cursor: pointer;
 }
 @media screen and (max-width: 775px) {
 #prevButton {
@@ -962,7 +976,7 @@ cursor: pointer;
   color: rgba(204,0,0,1); /* Text color matches the outline */
   background-color: transparent; /* Transparent background */
 font-family: Roboto;
-font-weight: 300;    
+font-weight: 300;
 font-size: 1.2em;
   padding: 10px 20px;
   cursor: pointer;
@@ -1096,7 +1110,7 @@ opacity: 1;
 
 /* Exiting page */
 .page.exit {
-transform: translateX(-100%); 
+transform: translateX(-100%);
 z-index: 50;
 opacity: 1;
 }
@@ -1108,9 +1122,9 @@ left:0;
 
 /* Hidden page */
 .page.hidden {
-display: none; 
+display: none;
 transform: translateX(100%);
-} 
+}
 
       /* Default state for hidden items */
 .animation {
